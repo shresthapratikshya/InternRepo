@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Getting Element by Name Example</title>
+    </head>
+    <body>
+        <h1>Example of getElementsByName</h1>
+        <p>Name:<input name="username" type="text" value="David"></p>
+        <p>Address:<input name="address" type="text" value="Kathmandu"></p>
+        <b id="demo"></b>
+        <script>
+            let elements = document.getElementsByName("username");
+            document.getElementById("demo").innerHTML = "Username: "+elements[0].value;
+        </script>
+    </body>
+</html>

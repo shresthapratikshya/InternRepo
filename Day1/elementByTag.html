@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Getting Element By TagName Example</title>
+    </head>
+    <body>
+        <h1>Example of getElementsByTagName</h1>
+        <p>This is a first paragraph</p>
+        <p>This is a second paragraph</p>
+        <b></b>
+        <div id="test">
+            <p class="tester"></p>
+        </div>
+        <script>
+            const elements = document.getElementsByTagName("p");
+            const x = document.getElementsByTagName("b")
+            x[0].innerHTML = elements[1].innerHTML;
+            // document.getElementById("test").innerHTML = elements[0].innerHTML;
+        </script>
+    </body>
+</html>
