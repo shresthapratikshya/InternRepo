@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Class Examples</title>
+    </head>
+    <body>
+        <p id="test1"></p>
+        <script>
+            class Student{
+                constructor(firstName, lastName){
+                    this.firstName = firstName;
+                    this.lastName = lastName;
+                }
+            }
+
+            const getStudent = new Student("Josh","Gray");
+            document.getElementById("test1").innerHTML = "FirstName: "+getStudent.firstName+
+            "<br>LastName:"+getStudent.lastName;
+            
+        </script>
+    </body>
+</html>

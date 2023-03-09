@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Arrays features</title>
+    </head>
+    <body>
+        <p id="test1"></p>
+        <p id="test2"></p>
+        
+        <script>
+            //entries
+            const subjects = ['Maths', 'Science', 'Computer', 'Account'];
+            const result = subjects.entries();
+            for(let x of result){  //index along with its correspoding values
+                document.getElementById("test1").innerHTML += x + "<br>";
+            }
+
+            //includes
+            document.getElementById("test2").innerHTML = subjects.includes("Computer");
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test</title>
+    </head>
+    <body>
+        <p id="test1"></p>
+        <p id="test2"></p>
+        
+        <script>
+            //map
+            const subjects = new Map([
+                ['Maths', 65],
+                ['Science', 85],
+                ['Computer', 70],
+                ['Social', 88],
+            ]);
+
+            subjects.set("Computer",90);
+            document.getElementById("test1").innerHTML = subjects.get("Computer");
+
+            //set
+            const values = new Set();
+            values.add("firstName");
+            values.add("lastName");
+            document.getElementById("test2").innerHTML = values.size;
+        </script>
+    </body>
+</html>

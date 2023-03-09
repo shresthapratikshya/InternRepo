@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Arrays Iterations</title>
+    </head>
+    <body>
+        <p id="test1"></p>
+        <p id="test2"></p>
+        <p id="test3"></p>
+        <p id="test4"></p>
+        <p id="test5"></p>
+        <p id="test6"></p>
+        <p id="test7"></p>
+
+        <script>
+            const numbers= [45,6,17,12,3];
+
+            //forEach 
+            numbers.sort(function(a,b){
+                return a-b;
+            });
+            let txt = '';
+            numbers.forEach(getNumbers);
+            function getNumbers(value){
+                txt += value + "<br>"
+            }
+            document.getElementById("test1").innerHTML = txt;
+
+            //map
+            const result = numbers.map(getChanges);
+            function getChanges(value){
+                return value*2;
+            }
+            document.getElementById("test2").innerHTML = result;
+
+            //fiter
+            const order = numbers.filter(getFiltered);
+            function getFiltered(value){
+                return value > 15
+            }
+            document.getElementById("test3").innerHTML = order;
+
+
+            //reduce
+            const reducedValue = numbers.reduce(getReduced);
+            function getReduced(total, value){    //returns previously added total value
+                return total+value;
+            }
+            document.getElementById("test4").innerHTML = "The total value is :"+reducedValue;
+
+
+            //every,some
+            const checker1 = numbers.some(getChecked); //returns based on some true or false values
+            const checker = numbers.every(getChecked);
+            function getChecked(value) { //returns boolean value, true iff every value returns true else viceversa
+                return value > 15
+            }
+            document.getElementById("test5").innerHTML = "It is "+checker;
+
+
+            //indexOf, lastIndexOf
+            const subjects = ['Maths', 'Science', 'Computer', 'Account','Science'];
+            let position = subjects.indexOf('Science'); //returns the first index that it finds
+            document.getElementById("test6").innerHTML = "It is in index " + position;
+            let pos = subjects.lastIndexOf('Science'); //returns the last index that it finds
+            document.getElementById("test7").innerHTML = "It is in index " + pos;
+
+        </script>
+    </body>
+</html>

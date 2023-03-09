@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Math</title>
+    </head>
+
+    <body>
+        <p id="test1"></p>
+        <p id="test2"></p>
+        <script>
+            //Math
+            document.getElementById("test1").innerHTML = Math.trunc(3.14);
+            document.getElementById("test2").innerHTML = "Positive: "+Math.sign(4);
+            document.getElementById("test2").innerHTML = "Negative: " + Math.sign(-3);
+            document.getElementById("test2").innerHTML = "Zero: " + Math.sign(0);
+            document.getElementById("test2").innerHTML = "Cube root of 64: " + Math.cbrt(64)
+            
+            //Number
+            document.getElementById("test2").innerHTML = "Integer:" + Number.isInteger(3);
+            document.getElementById("test2").innerHTML = "Integer:" + Number.isSafeInteger(21435437541257535231);
+
+            //globalMethods
+            document.getElementById("test2").innerHTML = "Finite:" + isFinite(10/0); 
+            document.getElementById("test2").innerHTML = "Is computer a number? " + isNaN("Computer"); 
+
+            
+        </script>
+    </body>
+</html>

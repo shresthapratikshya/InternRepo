@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Arrays Methods</title>
+    </head>
+    <body>
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+        <p id="demo3"></p>
+        <p id="demo4"></p>
+        <p id="demo5"></p>
+        <p id="demo6"></p>
+        <p id="demo7"></p>
+        <p id="demo8"></p>
+        <p id="demo9"></p>
+
+        <script>
+            //pop,push,shift,unshift
+            const subjects = ['Maths','Science','Computer','Account'];
+            document.getElementById("demo1").innerHTML = subjects.toString();
+            subjects.pop();
+            document.getElementById("demo2").innerHTML = subjects.join('*');
+            subjects.push('Social');
+            document.getElementById("demo3").innerHTML = subjects;
+            subjects.shift();
+            document.getElementById("demo4").innerHTML = subjects;
+            subjects.unshift('Economics');
+            document.getElementById("demo5").innerHTML = subjects;
+
+            //splice,slice
+            const details = ['David','Sarah','John'];
+            details.splice(1,1,'Maddie','Robert');
+            document.getElementById("demo6").innerHTML = details;
+            const result = details.slice(1);
+            document.getElementById("demo7").innerHTML = result;
+            
+            //concat
+            const experience = [4,15,7];
+            const info = details.concat(experience,subjects);
+            const suv = info.concat('Fiction');
+            document.getElementById("demo8").innerHTML = suv;
+
+            //reverse,sort,max,min
+            const equipments = ['Scanner','Printer','Desktop'];
+            equipments.reverse();
+            equipments.sort();
+            document.getElementById("demo9").innerHTML = equipments;
+            experience.sort(function(a,b){
+                return a-b;
+            })
+            function findMax(experience){
+                // return Math.min.apply(null,experience);
+                return Math.max.apply(null,experience);
+            }
+            document.getElementById("demo9").innerHTML = "Highest value: " + findMax(experience);
+
+            // document.getElementById("demo9").innerHTML = experience[experience.length-1];
+        </script>
+    </body>
+</html>

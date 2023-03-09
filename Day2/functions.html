@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Functions</title>
+    </head>
+    <body>
+        <p id="test1"></p>
+        <p id="test2"></p>
+        <p id="test3"></p>
+        <p id="test4"></p>
+
+        <script>
+            //default
+            function test(salary, bonus = 1500) {
+                return salary + bonus;
+            }
+            document.getElementById("test1").innerHTML = "Total Salary: " + test(12000);
+
+            //rest parameter
+            function getValues(...args){
+                let sum = 0;
+                for(let i of args){
+                    sum+=i;
+                }
+                return sum;
+            }
+            document.getElementById("test2").innerHTML = "Total Sum: " + getValues(43,21,31,4,6,232,1);
+
+            //startsWith, endsWith
+            const info = "This is a test";
+            document.getElementById("test3").innerHTML = "Starts with this:"+info.startsWith("This");
+            document.getElementById("test4").innerHTML = "Ends with this:" + info.endsWith("world");
+
+        </script>
+    </body>
+</html>

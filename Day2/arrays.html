@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Arrays Examples</title>
+    </head>
+    <body>
+        <p id="demo"></p>
+        <p id="test"></p>
+        <p id="test2"></p>
+        <script>
+            const subjects = ['Maths','Science','Computer'];
+            subjects[0]='Social';
+            subjects.push('Maths');
+            document.getElementById("demo").innerHTML = subjects[subjects.length-1];
+            // document.getElementById("demo").innerHTML = subjects;
+
+            const details = {
+                firstName: 'David',
+                lastName:'Marv',
+                address: 'NYC'
+            }
+            document.getElementById("test").innerHTML = Array.isArray(details);
+            document.getElementById("test2s").innerHTML= details.firstName;
+            let text ='' ;
+            for(let key in details){
+                text += details[key];
+                
+            }
+            document.getElementById("test2").innerHTML =text;
+            
+        </script>
+    </body>
+</html>
