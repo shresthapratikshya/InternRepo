@@ -13,7 +13,7 @@ function createBlog() {
     localStorage.setItem("currentData", JSON.stringify(currentData));
 
     if (JSON.parse(localStorage.getItem("allData")) == null) {
-        console.log("Hello");
+        //console.log("Hello");
         allData = [];
     }
     allData.push(currentData);
